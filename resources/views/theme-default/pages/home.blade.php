@@ -17,6 +17,76 @@
     <div class="container margin_60">
 
         <div class="main_title">
+            <h2><span>{{ setting('trang-chu.thuexe_st_title') }}</span></h2>
+            <p>
+                {{ setting('trang-chu.thuexe_st_subtitle') }}
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.2s">
+                <div class="feature_home">
+                    <i class="{{ setting('trang-chu.thuexe_st_icon1') }}"></i>
+                    <h3>{{ setting('trang-chu.thuexe_st_title1') }}</h3>
+                    <p>
+                        {{ setting('trang-chu.thuexe_st_des1') }}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.4s">
+                <div class="feature_home">
+                    <i class="{{ setting('trang-chu.thuexe_st_icon2') }}"></i>
+                    <h3>{{ setting('trang-chu.thuexe_st_title2') }}</h3>
+                    <p>
+                        {{ setting('trang-chu.thuexe_st_des2') }}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                <div class="feature_home">
+                    <i class="{{ setting('trang-chu.thuexe_st_icon3') }}"></i>
+                    <h3>{{ setting('trang-chu.thuexe_st_title3') }}</h3>
+                    <p>
+                        {{ setting('trang-chu.thuexe_st_des3') }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--End row -->
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ Voyager::image(setting('trang-chu.getstarted_st_img')) }}" alt="AZ Callme" class="img-fluid laptop">
+            </div>
+            <div class="col-md-6">
+                <h3><span>{{ setting('trang-chu.getstarted_st_title') }}</span></h3>
+                {!! setting('trang-chu.getstarted_st_content') !!}
+                <a href="{{ setting('trang-chu.getstarted_st_link_btn') }}" class="btn_1">Bắt đầu ngay</a>
+            </div>
+        </div>
+        <!-- End row -->
+
+    </div>
+    <!-- End container -->
+
+    <section class="promo_full" style="background: url({{ Voyager::image(setting('trang-chu.quangcao_st_img')) }}) no-repeat center center;background-attachment: fixed;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;">
+        <div class="promo_full_wp magnific">
+            <div>
+                <h3>{{ setting('trang-chu.quangcao_st_title') }}</h3>
+                <p>
+                    {{ setting('trang-chu.quangcao_st_subtitle') }}
+                </p>
+                <a href="{{ setting('trang-chu.quangcao_st_link_youtube') }}" class="video"><i class="icon-play-circled2-1"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- End section -->
+
+    <div class="container margin_60">
+
+        <div class="main_title">
             <h2>Paris <span>Top</span> Tours</h2>
             <p>Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.</p>
         </div>
@@ -378,90 +448,6 @@
             <a href="all_hotels_list.html" class="btn_1 medium"><i class="icon-eye-7"></i>View all hotels (70) </a>
         </p>
         
-    </div>
-    <!-- End container -->
-
-    <section class="promo_full" style="background: url({{ Voyager::image(setting('trang-chu.quangcao_st_img')) }}) no-repeat center center;background-attachment: fixed;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;">
-        <div class="promo_full_wp magnific">
-            <div>
-                <h3>{{ setting('trang-chu.quangcao_st_title') }}</h3>
-                <p>
-                    {{ setting('trang-chu.quangcao_st_subtitle') }}
-                </p>
-                <a href="{{ setting('trang-chu.quangcao_st_link_youtube') }}" class="video"><i class="icon-play-circled2-1"></i></a>
-            </div>
-        </div>
-    </section>
-    <!-- End section -->
-
-    <div class="container margin_60">
-
-        <div class="main_title">
-            <h2>Some <span>good</span> reasons</h2>
-            <p>
-                Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
-            </p>
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.2s">
-                <div class="feature_home">
-                    <i class="icon_set_1_icon-41"></i>
-                    <h3><span>+120</span> Premium tours</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-                    </p>
-                    <a href="about.html" class="btn_1 outline">Read more</a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.4s">
-                <div class="feature_home">
-                    <i class="icon_set_1_icon-30"></i>
-                    <h3><span>+1000</span> Customers</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-                    </p>
-                    <a href="about.html" class="btn_1 outline">Read more</a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
-                <div class="feature_home">
-                    <i class="icon_set_1_icon-57"></i>
-                    <h3><span>H24 </span> Support</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-                    </p>
-                    <a href="about.html" class="btn_1 outline">Read more</a>
-                </div>
-            </div>
-
-        </div>
-        <!--End row -->
-
-        <hr>
-
-        <div class="row">
-            <div class="col-md-6">
-                <img src="img/laptop.png" alt="Laptop" class="img-fluid laptop">
-            </div>
-            <div class="col-md-6">
-                <h3><span>Get started</span> with CityTours</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
-                </p>
-                <ul class="list_order">
-                    <li><span>1</span>Select your preferred tours</li>
-                    <li><span>2</span>Purchase tickets and options</li>
-                    <li><span>3</span>Pick them directly from your office</li>
-                </ul>
-                <a href="all_tour_list.html" class="btn_1">Start now</a>
-            </div>
-        </div>
-        <!-- End row -->
-
     </div>
     <!-- End container -->
 </main>
