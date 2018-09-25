@@ -1,14 +1,57 @@
 <?php
 /*
+ * GET ALL BANNERS
+ *
  * @select: string
  * @order_col: string
  * @order_by: asc/desc
  */
 if(! function_exists('getAllBanners')){
-    function getAllBanners($select='*', $order_col, $order_by="asc"){
+    function getAllBanners($select='*', $order_col, $order_by="asc")
+    {
         $item = App\Banner::select($select)
                 ->orderBy($order_col, $order_by)
                 ->get();
         return $item;
+    }
+}
+
+/*
+ * GET ALL TESTIMONIALS
+ *
+ * @select: string
+ * @order_col: string
+ * @order_by: asc/desc
+ */
+if(! function_exists('getAllTestimonials')){
+    function getAllTestimonials($select='*', $order_col, $order_by="asc")
+    {
+        $item = App\Testimonial::select($select)
+                ->orderBy($order_col, $order_by)
+                ->get();
+        return $item;
+    }
+}
+
+/*
+ * RENDER STARS
+ *
+ * @stars: number
+ */
+if(! function_exists('renderStars')){
+    function renderStars($stars)
+    {
+        $html = "";
+        if($stars >= 1 && $stars <=5){
+            for($i = 1; $i<=$stars; $i++){
+                $html .= '<i class="icon-star voted"></i>';
+            }
+            for($j = 1; $j<=5-$stars; $j++){
+                $html .= '<i class=" icon-star-empty"></i>';
+            }
+        }else{
+            $html = "";
+        }
+        return $html;
     }
 }

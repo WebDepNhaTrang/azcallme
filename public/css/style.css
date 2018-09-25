@@ -679,7 +679,6 @@ ul#cart_items li:last-child span{
 
 /* Footer */
 footer {
-	background: #222 url(../img/pattern.png) repeat 0 0;
 	color: #fff;
 	padding: 30px 0 10px 0;
 }
@@ -2279,8 +2278,6 @@ input.qty2 {
 .features-bg {
 	position: relative;
 	min-height: 400px;
-	background: url(../img/features-intro-01.jpg) no-repeat center center;
-	background-size: cover;
 }
 
 .features-img {
@@ -4481,12 +4478,12 @@ ul.plan-features {
 /* Promo_full */
 .promo_full {
 	height: auto;
-	background: url(../img/home_bg_2.jpg) no-repeat center center;
+	/* background: url(../img/home_bg_2.jpg) no-repeat center center;
 	background-attachment: fixed;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;
+	-o-background-size: cover; */
 	position: relative;
 }
 

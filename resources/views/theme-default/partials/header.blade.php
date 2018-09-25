@@ -20,7 +20,7 @@
                 <div class="col-6"><i class="icon-phone"></i><strong>{{ setting('lien-he.phone') }}</strong></div>
                 <div class="col-6">
                     <ul id="top_links">
-                        <li><a href="mailto:chithien175@gmail.com"><i class="icon-mail"></i>{{ setting('lien-he.email') }}</a></li>
+                        <li><a href="mailto:{{ setting('lien-he.email') }}"><i class="icon-mail"></i>{{ setting('lien-he.email') }}</a></li>
                     </ul>
                 </div>
             </div><!-- End row -->
