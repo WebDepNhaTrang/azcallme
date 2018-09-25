@@ -1,14 +1,14 @@
 <!-- COMMON CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/vendors.css" rel="stylesheet">
-
-<!-- CUSTOM CSS -->
-<link href="css/custom.css" rel="stylesheet">
+<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('css/vendors.css') }}" rel="stylesheet">
 
 <!-- REVOLUTION SLIDER CSS -->
-<link rel="stylesheet" type="text/css" href="rev-slider-files/fonts/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="rev-slider-files/css/settings.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('rev-slider-files/fonts/font-awesome/css/font-awesome.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('rev-slider-files/css/settings.css') }}">
+
+<!-- CUSTOM CSS -->
+<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 <!-- REVOLUTION LAYERS STYLES -->
 <style>
