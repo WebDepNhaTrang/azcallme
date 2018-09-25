@@ -25,11 +25,9 @@
 		<div id="position">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a>
+					<li><a href="{{ route('frontend.pages.home') }}">Trang chủ</a>
 					</li>
-					<li><a href="#">Category</a>
-					</li>
-					<li>Page active</li>
+					<li>Liên hệ</li>
 				</ul>
 			</div>
 		</div>
