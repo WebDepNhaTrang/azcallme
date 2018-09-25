@@ -15,7 +15,7 @@ return [
         'default_role'                 => 'user',
         'namespace'                    => null,
         'default_avatar'               => 'users/default.png',
-        'redirect'                     => '/admin',
+        'redirect'                     => '/administrator',
     ],
 
     /*
@@ -120,13 +120,13 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'vi',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
-            'en',
+            'vi',
             //'pt',
         ],
     ],
