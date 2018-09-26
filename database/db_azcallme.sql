@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th9 25, 2018 lúc 09:49 AM
+-- Thời gian đã tạo: Th9 26, 2018 lúc 04:06 AM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 7.1.20
 
@@ -168,7 +168,21 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (68, 8, 'star', 'number', 'Số lượng ngôi sao', 1, 0, 1, 1, 1, 1, NULL, 4),
 (69, 8, 'image', 'image', 'Hình ảnh (68 x 68 px)', 1, 1, 1, 1, 1, 1, NULL, 5),
 (70, 8, 'created_at', 'timestamp', 'Tạo lúc', 0, 0, 1, 1, 0, 1, NULL, 6),
-(71, 8, 'updated_at', 'timestamp', 'Sửa lúc', 0, 0, 0, 0, 0, 0, NULL, 7);
+(71, 8, 'updated_at', 'timestamp', 'Sửa lúc', 0, 0, 0, 0, 0, 0, NULL, 7),
+(72, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(73, 9, 'name', 'text', 'Tên', 1, 1, 1, 1, 1, 1, NULL, 2),
+(74, 9, 'banner', 'image', 'Hình banner (1400 x 470 px)', 1, 0, 1, 1, 1, 1, NULL, 11),
+(75, 9, 'image', 'image', 'Hình đại diện (800 x 533 px)', 1, 1, 1, 1, 1, 1, NULL, 10),
+(76, 9, 'ribbon_text', 'text', 'Promo (Vd: \"Hot deal\" hoặc để trống)', 0, 0, 1, 1, 1, 1, NULL, 5),
+(77, 9, 'ribbon_color', 'select_dropdown', 'Màu promo', 0, 0, 1, 1, 1, 1, '{\"default\":\"red\",\"options\":{\"red\":\"Đỏ\",\"green\":\"Xanh\"}}', 6),
+(78, 9, 'badge_save', 'text', 'Giảm giá (Vd: \"-30%\" hoặc để trống)', 0, 0, 1, 1, 1, 1, NULL, 7),
+(79, 9, 'address', 'text', 'Địa chỉ', 0, 1, 1, 1, 1, 1, NULL, 8),
+(80, 9, 'price', 'text', 'Giá', 0, 1, 1, 1, 1, 1, NULL, 9),
+(81, 9, 'body', 'rich_text_box', 'Nội dung', 0, 0, 1, 1, 1, 1, NULL, 4),
+(82, 9, 'galleries', 'multiple_images', 'Bộ siêu tập (1000 x 667 px)', 0, 0, 1, 1, 1, 1, NULL, 12),
+(83, 9, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 1, 0, 1, NULL, 13),
+(84, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 14),
+(85, 9, 'slug', 'text', 'Slug', 1, 0, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"name\",\"forceUpdate\":true},\"validation\":{\"rule\":\"unique:tours,slug\"}}', 3);
 
 -- --------------------------------------------------------
 
@@ -206,7 +220,8 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2018-09-24 19:37:59', '2018-09-24 19:37:59'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2018-09-24 19:38:00', '2018-09-24 19:38:00'),
 (7, 'banners', 'banners', 'Trình chiếu (Slider)', 'Trình chiếu (Slider)', 'voyager-images', 'App\\Banner', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-09-24 21:13:58', '2018-09-24 21:13:58'),
-(8, 'testimonials', 'testimonials', 'Lời chứng thực', 'Lời chứng thực', 'voyager-bubble-hear', 'App\\Testimonial', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-09-25 00:37:00', '2018-09-25 00:37:00');
+(8, 'testimonials', 'testimonials', 'Lời chứng thực', 'Lời chứng thực', 'voyager-bubble-hear', 'App\\Testimonial', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-09-25 00:37:00', '2018-09-25 00:37:00'),
+(9, 'tours', 'tours', 'Tour', 'Tours', 'voyager-rocket', 'App\\Tour', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-09-25 19:15:16', '2018-09-25 19:15:16');
 
 -- --------------------------------------------------------
 
@@ -265,10 +280,10 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (7, 1, 'Cơ sở dữ liệu', '', '_self', 'voyager-data', '#000000', 5, 5, '2018-09-24 19:37:56', '2018-09-24 19:46:54', 'voyager.database.index', 'null'),
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 6, '2018-09-24 19:37:56', '2018-09-24 19:46:54', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 7, '2018-09-24 19:37:56', '2018-09-24 19:46:54', 'voyager.bread.index', NULL),
-(10, 1, 'Tùy chỉnh trang', '', '_self', 'voyager-settings', '#000000', 15, 6, '2018-09-24 19:37:56', '2018-09-25 00:37:15', 'voyager.settings.index', 'null'),
-(11, 1, 'Danh mục', '', '_self', 'voyager-categories', '#000000', 15, 4, '2018-09-24 19:37:58', '2018-09-25 00:37:15', 'voyager.categories.index', 'null'),
-(12, 1, 'Bài viết', '', '_self', 'voyager-news', '#000000', 15, 3, '2018-09-24 19:37:59', '2018-09-25 00:37:15', 'voyager.posts.index', 'null'),
-(13, 1, 'Trang tĩnh', '', '_self', 'voyager-file-text', '#000000', 15, 5, '2018-09-24 19:38:00', '2018-09-25 00:37:15', 'voyager.pages.index', 'null'),
+(10, 1, 'Tùy chỉnh trang', '', '_self', 'voyager-settings', '#000000', 15, 7, '2018-09-24 19:37:56', '2018-09-25 19:15:37', 'voyager.settings.index', 'null'),
+(11, 1, 'Danh mục', '', '_self', 'voyager-categories', '#000000', 15, 5, '2018-09-24 19:37:58', '2018-09-25 19:15:37', 'voyager.categories.index', 'null'),
+(12, 1, 'Bài viết', '', '_self', 'voyager-news', '#000000', 15, 4, '2018-09-24 19:37:59', '2018-09-25 19:15:37', 'voyager.posts.index', 'null'),
+(13, 1, 'Trang tĩnh', '', '_self', 'voyager-file-text', '#000000', 15, 6, '2018-09-24 19:38:00', '2018-09-25 19:15:37', 'voyager.pages.index', 'null'),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 8, '2018-09-24 19:38:02', '2018-09-24 19:46:54', 'voyager.hooks', NULL),
 (15, 1, 'Chỉnh sửa trang', '', '_self', 'voyager-brush', '#000000', NULL, 2, '2018-09-24 19:45:07', '2018-09-24 19:45:37', NULL, ''),
 (16, 2, 'Trang chủ', '', '_self', NULL, '#000000', NULL, 4, '2018-09-24 19:53:04', '2018-09-24 20:30:34', 'frontend.pages.home', 'null'),
@@ -278,7 +293,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (20, 2, 'Dịch vụ xe đưa đón', '', '_self', NULL, '#000000', NULL, 8, '2018-09-24 19:54:00', '2018-09-25 02:38:31', 'frontend.pages.car', 'null'),
 (21, 2, 'Liên hệ', '', '_self', NULL, '#000000', NULL, 9, '2018-09-24 19:54:08', '2018-09-25 02:10:28', 'frontend.pages.contact', 'null'),
 (22, 1, 'Trình chiếu (Slider)', '', '_self', 'voyager-images', NULL, 15, 1, '2018-09-24 21:13:58', '2018-09-24 21:14:17', 'voyager.banners.index', NULL),
-(23, 1, 'Lời chứng thực', '', '_self', 'voyager-bubble-hear', NULL, 15, 2, '2018-09-25 00:37:01', '2018-09-25 00:37:15', 'voyager.testimonials.index', NULL);
+(23, 1, 'Lời chứng thực', '', '_self', 'voyager-bubble-hear', NULL, 15, 2, '2018-09-25 00:37:01', '2018-09-25 00:37:15', 'voyager.testimonials.index', NULL),
+(24, 1, 'Tours', '', '_self', 'voyager-rocket', NULL, 15, 3, '2018-09-25 19:15:17', '2018-09-25 19:15:37', 'voyager.tours.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -433,7 +449,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (48, 'read_testimonials', 'testimonials', '2018-09-25 00:37:00', '2018-09-25 00:37:00'),
 (49, 'edit_testimonials', 'testimonials', '2018-09-25 00:37:00', '2018-09-25 00:37:00'),
 (50, 'add_testimonials', 'testimonials', '2018-09-25 00:37:00', '2018-09-25 00:37:00'),
-(51, 'delete_testimonials', 'testimonials', '2018-09-25 00:37:00', '2018-09-25 00:37:00');
+(51, 'delete_testimonials', 'testimonials', '2018-09-25 00:37:00', '2018-09-25 00:37:00'),
+(52, 'browse_tours', 'tours', '2018-09-25 19:15:16', '2018-09-25 19:15:16'),
+(53, 'read_tours', 'tours', '2018-09-25 19:15:16', '2018-09-25 19:15:16'),
+(54, 'edit_tours', 'tours', '2018-09-25 19:15:16', '2018-09-25 19:15:16'),
+(55, 'add_tours', 'tours', '2018-09-25 19:15:16', '2018-09-25 19:15:16'),
+(56, 'delete_tours', 'tours', '2018-09-25 19:15:16', '2018-09-25 19:15:16');
 
 -- --------------------------------------------------------
 
@@ -500,7 +521,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (48, 1),
 (49, 1),
 (50, 1),
-(51, 1);
+(51, 1),
+(52, 1),
+(53, 1),
+(54, 1),
+(55, 1),
+(56, 1);
 
 -- --------------------------------------------------------
 
@@ -590,8 +616,8 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
-(11, 'lien-he.phone', 'Điện thoại', '0909 999 999', NULL, 'text', 6, 'Liên Hệ'),
-(12, 'lien-he.email', 'Email', 'azcallme@gmail.com', NULL, 'text', 7, 'Liên Hệ'),
+(11, 'lien-he.phone', 'Điện thoại', '0909 999 999', NULL, 'text', 35, 'Liên Hệ'),
+(12, 'lien-he.email', 'Email', 'azcallme@gmail.com', NULL, 'text', 36, 'Liên Hệ'),
 (13, 'trang-chu.footer-bg-color', 'Phần Footer - Màu nền', '#101135', NULL, 'text', 30, 'Trang Chủ'),
 (15, 'trang-chu.footer-des', 'Phần Footer - Mô tả', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe harum quaerat doloribus dolor sunt molestiae error ipsa quos accusamus velit consectetur atque, voluptatem veniam quia officia placeat minima molestias quisquam.', NULL, 'text_area', 31, 'Trang Chủ'),
 (16, 'gioi-thieu.banner_title', 'Banner - Tiêu đề', 'Giới Thiệu', NULL, 'text', 10, 'Giới Thiệu'),
@@ -626,7 +652,17 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (45, 'trang-chu.thuexe_st_des2', 'Phần Thuê Xe - Mô tả 2', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 8, 'Trang Chủ'),
 (46, 'trang-chu.thuexe_st_icon3', 'Phần Thuê Xe - Icon 3', 'icon_set_1_icon-57', NULL, 'text', 9, 'Trang Chủ'),
 (47, 'trang-chu.thuexe_st_title3', 'Phần Thuê Xe - Tiêu đề 3', 'H24 Support', NULL, 'text', 10, 'Trang Chủ'),
-(48, 'trang-chu.thuexe_st_des3', 'Phần Thuê Xe - Mô tả 3', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 11, 'Trang Chủ');
+(48, 'trang-chu.thuexe_st_des3', 'Phần Thuê Xe - Mô tả 3', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 11, 'Trang Chủ'),
+(49, 'lien-he.banner_title', 'Banner - Tiêu đề', 'Liên hệ', NULL, 'text', 6, 'Liên Hệ'),
+(50, 'lien-he.banner_des', 'Banner - Mô tả', 'Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.', NULL, 'text', 7, 'Liên Hệ'),
+(51, 'lien-he.banner_img', 'Banner - Hình ảnh (1400 x 470 px)', 'settings\\September2018\\oBRfbNa2SflWKyW5VSlL.jpg', NULL, 'image', 32, 'Liên Hệ'),
+(52, 'lien-he.form_title', 'Form - Tiêu đề', 'Liên hệ với chúng tôi', NULL, 'text', 33, 'Liên Hệ'),
+(53, 'lien-he.form_subtitle', 'Form - Tiêu đề con', 'Chúng tôi sẽ liên hệ bạn trong thời gian sớm nhất', NULL, 'text', 34, 'Liên Hệ'),
+(54, 'lien-he.address', 'Địa chỉ', 'Nha Trang, Khánh Hòa', NULL, 'text', 37, 'Liên Hệ'),
+(56, 'tours.banner_title', 'Banner - Tiêu đề', 'TOURS', NULL, 'text', 38, 'Tours'),
+(57, 'tours.banner_des', 'Banner - Mô tả', 'Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.', NULL, 'text', 39, 'Tours'),
+(58, 'tours.banner_img', 'Banner - Hình ảnh (1400 x 470 px)', 'settings\\September2018\\s6hC5Umq1bcvelEux25B.jpg', NULL, 'image', 40, 'Tours'),
+(59, 'tours.paginate', 'Phân trang', '1', NULL, 'text', 41, 'Tours');
 
 -- --------------------------------------------------------
 
@@ -653,6 +689,37 @@ INSERT INTO `testimonials` (`id`, `name`, `body`, `star`, `image`, `created_at`,
 (2, 'Frank Rosso', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.\"', 4, 'testimonials\\September2018\\DXAdz7buUO8v3nGOySuj.jpg', '2018-09-25 00:40:15', '2018-09-25 00:40:15'),
 (3, 'Marc twain', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.\"', 4, 'testimonials\\September2018\\k3TjFqSnqmCvDWi120NE.jpg', '2018-09-25 00:40:35', '2018-09-25 00:40:35'),
 (4, 'Peter Gabriel', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.\"', 5, 'testimonials\\September2018\\RY7vhn1cMLwK5FHSp20f.jpg', '2018-09-25 00:40:52', '2018-09-25 00:40:52');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tours`
+--
+
+CREATE TABLE `tours` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `banner` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ribbon_text` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ribbon_color` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `badge_save` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci,
+  `galleries` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tours`
+--
+
+INSERT INTO `tours` (`id`, `name`, `banner`, `image`, `ribbon_text`, `ribbon_color`, `badge_save`, `address`, `price`, `body`, `galleries`, `created_at`, `updated_at`, `slug`) VALUES
+(1, 'Tour dữ liệu mẫu 1', 'tours\\September2018\\5YFnTZmKorIUQAUaq0eX.jpg', 'tours\\September2018\\v9WUKg52XCPUHyYBrBO9.jpg', 'Nổi bật', 'red', '-10%', 'Nha Trang, Khánh Hòa', '150.000', '<p>Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật.&nbsp;</p>\r\n<p>Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật.&nbsp;</p>\r\n<p>Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật.&nbsp;</p>', '[\"tours\\\\September2018\\\\Z6t0UuAZNaMAlOx7IQFb.jpg\",\"tours\\\\September2018\\\\OsHUqskvc1Qc5UB7KqNT.jpg\",\"tours\\\\September2018\\\\3D8gA86B20zRg8QbJFzE.jpg\"]', '2018-09-25 19:23:10', '2018-09-25 19:23:10', 'tour-du-lieu-mau-1'),
+(2, 'Tour dữ liệu mẫu 2', 'tours\\September2018\\nYVi2wNBqM22hieFeGgJ.jpg', 'tours\\September2018\\wiRD7ihMqGE0Lk549zEP.jpg', NULL, 'red', NULL, 'Tp.HCM, Việt Nam', '350.000', '<p>Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật.&nbsp;</p>\r\n<p>Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật.&nbsp;</p>\r\n<p>Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật. Nội dung đang được cập nhật.&nbsp;</p>', '[\"tours\\\\September2018\\\\xHdzQPRpEnom52MJMzJc.jpg\",\"tours\\\\September2018\\\\M5HSsqISQqM9KdZQu1TN.jpg\",\"tours\\\\September2018\\\\jGGypdRNyOXYjw6P5Bp8.jpg\"]', '2018-09-25 19:25:01', '2018-09-25 19:25:01', 'tour-du-lieu-mau-2');
 
 -- --------------------------------------------------------
 
@@ -731,7 +798,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', '$2y$10$V5/ycgBDTAxj.X4bcZ3gsuAsSnRh5hTusPpVZcn0NSUOlpbiMaGaO', 'hK9dwUI0DBnOKdDtSvaRANph7Bx49GKqh6QYVzQmlsSDCwSNwlQcDpG6TNXZ', '{\"locale\":\"vi\"}', '2018-09-24 19:37:59', '2018-09-24 19:39:17');
+(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', '$2y$10$V5/ycgBDTAxj.X4bcZ3gsuAsSnRh5hTusPpVZcn0NSUOlpbiMaGaO', '7Tc7IagQbbOUwqGORvytlamJjuy0lh93pP1DSd82jvnKD8Vtz9R9uCftKEQq', '{\"locale\":\"vi\"}', '2018-09-24 19:37:59', '2018-09-24 19:39:17');
 
 -- --------------------------------------------------------
 
@@ -853,6 +920,13 @@ ALTER TABLE `testimonials`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Chỉ mục cho bảng `tours`
+--
+ALTER TABLE `tours`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `tours_slug_unique` (`slug`);
+
+--
 -- Chỉ mục cho bảng `translations`
 --
 ALTER TABLE `translations`
@@ -895,13 +969,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT cho bảng `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT cho bảng `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `menus`
@@ -913,7 +987,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT cho bảng `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT cho bảng `migrations`
@@ -931,7 +1005,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT cho bảng `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT cho bảng `posts`
@@ -949,13 +1023,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT cho bảng `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT cho bảng `testimonials`
 --
 ALTER TABLE `testimonials`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT cho bảng `tours`
+--
+ALTER TABLE `tours`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `translations`
