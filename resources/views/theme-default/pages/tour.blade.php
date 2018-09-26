@@ -48,6 +48,9 @@
                             <div class="img_container">
                                 <a href="{{ route('frontend.pages.tour-detail',[$v->slug, $v->id]) }}">
                                     <img src="{{ Voyager::image($v->image) }}" width="800" height="533" class="img-fluid" alt="Image">
+                                    @if($v->badge_save)
+                                    <div class="badge_save"><strong>{{ $v->badge_save }}</strong></div>
+                                    @endif
                                     <div class="short_info">
                                         <span class="price">{{ $v->price }}<sup> VNĐ</sup></span>
                                     </div>
