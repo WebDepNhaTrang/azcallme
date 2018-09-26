@@ -42,7 +42,7 @@
                     <div class="col-md-4 wow zoomIn" data-wow-delay="0.{{ $k+1 }}s">
                         <div class="tour_container">
                             @if($v->ribbon_text)
-                            <div class="ribbon_3 {{ ($v->ribbon_color)?'popular':'' }}"><span>{{ $v->ribbon_text }}</span>
+                            <div class="ribbon_3 {{ ($v->ribbon_color == 'red')?'popular':'' }}"><span>{{ $v->ribbon_text }}</span>
                             </div>
                             @endif
                             <div class="img_container">

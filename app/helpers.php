@@ -51,6 +51,23 @@ if(! function_exists('getAllTours')){
 }
 
 /*
+ * GET ALL APARTMENTS
+ *
+ * @select: string
+ * @order_col: string
+ * @order_by: asc/desc
+ * @paginate: number
+ */
+if(! function_exists('getAllApartments')){
+    function getAllApartments($select='*', $order_col, $order_by="asc", $paginate = 3){
+        $item = App\Apartment::select($select)
+                ->orderBy($order_col, $order_by)
+                ->paginate($paginate);
+        return $item;
+    }
+}
+
+/*
  * TOTAL TOURS
  *
  * 
@@ -58,6 +75,18 @@ if(! function_exists('getAllTours')){
 if(! function_exists('totalTours')){
     function totalTours(){
         $total = App\Tour::all()->count();
+        return $total;
+    }
+}
+
+/*
+ * TOTAL APARTMENTS
+ *
+ * 
+ */
+if(! function_exists('totalApartments')){
+    function totalApartments(){
+        $total = App\Apartment::all()->count();
         return $total;
     }
 }

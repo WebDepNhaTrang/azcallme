@@ -42,6 +42,10 @@ Route::get('/can-ho.html', function (){
     return view('theme-default.pages.apartment');
 })->name('frontend.pages.apartment');
 
+// Chi Tiết căn hộ
+Route::get('/can-ho/{slug}_{id}.html', 'FrontendController@apartmentDetail')
+    ->name('frontend.pages.apartment-detail');
+
 // Xe
 Route::get('/dich-vu-xe-dua-don.html', function (){
     return view('theme-default.pages.car');
