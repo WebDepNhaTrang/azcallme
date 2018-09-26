@@ -128,7 +128,7 @@
         @endif
         
         <p class="text-center add_bottom_30">
-            <a href="all_tours_list.html" class="btn_1 medium"><i class="icon-eye-7"></i>View all tours (144) </a>
+            <a href="all_tours_list.html" class="btn_1 medium"><i class="icon-eye-7"></i>Xem tất cả ({{ totalTours() }} tours)</a>
         </p>
 
         <hr>

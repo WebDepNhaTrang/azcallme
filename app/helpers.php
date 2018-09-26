@@ -51,6 +51,18 @@ if(! function_exists('getAllTours')){
 }
 
 /*
+ * TOTAL TOURS
+ *
+ * 
+ */
+if(! function_exists('totalTours')){
+    function totalTours(){
+        $total = App\Tour::all()->count();
+        return $total;
+    }
+}
+
+/*
  * RENDER STARS
  *
  * @stars: number
