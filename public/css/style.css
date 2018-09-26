@@ -3144,6 +3144,9 @@ ul.list_order li span {
 }
 
 /* Margin tools */
+.margin_bottom_30{
+	margin-bottom: 30px;
+}
 .margin_60 {
 	padding-top: 60px;
 	padding-bottom: 60px;
