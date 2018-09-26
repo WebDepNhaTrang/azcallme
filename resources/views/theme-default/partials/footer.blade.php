@@ -13,9 +13,9 @@
             <div class="col-md-3">
                 <h3>Dịch Vụ</h3>
                 <ul>
-                    <li><a href="#">Tours</a></li>
-                    <li><a href="#">Căn hộ</a></li>
-                    <li><a href="#">Dịch vụ xe đưa đón</a></li>
+                    <li><a href="{{ route('frontend.pages.tour') }}">Tours</a></li>
+                    <li><a href="{{ route('frontend.pages.apartment') }}">Căn hộ</a></li>
+                    <li><a href="{{ route('frontend.pages.car') }}">Dịch vụ xe đưa đón</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -29,11 +29,11 @@
                 <div id="social_footer">
                     <ul>
                         <li><a href="#"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <!-- <li><a href="#"><i class="icon-twitter"></i></a></li> -->
                         <li><a href="#"><i class="icon-google"></i></a></li>
                         <li><a href="#"><i class="icon-instagram"></i></a></li>
-                        <li><a href="#"><i class="icon-pinterest"></i></a></li>
-                        <li><a href="#"><i class="icon-vimeo"></i></a></li>
+                        <!-- <li><a href="#"><i class="icon-pinterest"></i></a></li> -->
+                        <!-- <li><a href="#"><i class="icon-vimeo"></i></a></li> -->
                         <li><a href="#"><i class="icon-youtube-play"></i></a></li>
                     </ul>
                     <div class="copywrite-text d-flex align-items-center justify-content-center">

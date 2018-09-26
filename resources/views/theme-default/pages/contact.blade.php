@@ -11,11 +11,11 @@
 
 @section('content')
 
-	<section class="parallax-window" data-parallax="scroll" data-image-src="img/header_bg.jpg" data-natural-width="1400" data-natural-height="470">
+	<section class="parallax-window" data-parallax="scroll" data-image-src="{{ Voyager::image(setting('lien-he.banner_img')) }}" data-natural-width="1400" data-natural-height="470">
 		<div class="parallax-content-1">
 			<div class="animated fadeInDown">
-				<h1>Contact us</h1>
-				<p>Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.</p>
+				<h1>{{ setting('lien-he.banner_title') }}</h1>
+				<p>{{ setting('lien-he.banner_des') }}</p>
 			</div>
 		</div>
 	</section>
@@ -37,9 +37,9 @@
 			<div class="row">
 				<div class="col-md-8">
 					<div class="form_title">
-						<h3><strong><i class="icon-pencil"></i></strong>Fill the form below</h3>
+						<h3><strong><i class="icon-pencil"></i></strong>{{ setting('lien-he.form_title') }}</h3>
 						<p>
-							Mussum ipsum cacilds, vidis litro abertis.
+							{{ setting('lien-he.form_subtitle') }}
 						</p>
 					</div>
 					<div class="step">
@@ -102,26 +102,22 @@
 				<div class="col-md-4">
 					<div class="box_style_1">
 						<span class="tape"></span>
-						<h4>Address <span><i class="icon-pin pull-right"></i></span></h4>
+						<h4>Địa chỉ <span><i class="icon-address pull-right"></i></span></h4>
 						<p>
-							Place Charles de Gaulle, 75008 Paris
+							{{ setting('lien-he.address') }}
 						</p>
 						<hr>
-						<h4>Help center <span><i class="icon-help pull-right"></i></span></h4>
-						<p>
-							Lorem ipsum dolor sit amet, vim id accusata sensibus, id ridens quaeque qui. Ne qui vocent ornatus molestie.
-						</p>
+						<h4>Email <span><i class="icon-mail pull-right"></i></span></h4>
 						<ul id="contact-info">
-							<li>+ 61 (2) 8093 3400 / + 61 (2) 8093 3402</li>
-							<li><a href="#">info@domain.com</a>
+							<li><a href="{{ setting('lien-he.email') }}">{{ setting('lien-he.email') }}</a>
 							</li>
 						</ul>
 					</div>
 					<div class="box_style_4">
 						<i class="icon_set_1_icon-57"></i>
-						<h4>Need <span>Help?</span></h4>
-						<a href="tel://004542344599" class="phone">+45 423 445 99</a>
-						<small>Monday to Friday 9.00am - 7.30pm</small>
+						<h4>Bạn cần<span>tư vấn?</span></h4>
+						<a href="{{ setting('lien-he.phone') }}" class="phone">{{ setting('lien-he.phone') }}</a>
+						<!-- <small>Monday to Friday 9.00am - 7.30pm</small> -->
 					</div>
 				</div>
 				<!-- End col-md-4 -->
