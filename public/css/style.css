@@ -3144,6 +3144,9 @@ ul.list_order li span {
 }
 
 /* Margin tools */
+.padding_bottom_30{
+	padding-bottom: 30px;
+}
 .margin_bottom_30{
 	margin-bottom: 30px;
 }
@@ -6071,12 +6074,10 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	
 	.row-height {
 		height: auto;
-		min-height: ;
 	}
 	
 	.content-left {
 		height: auto;
-		min-height: ;
 		overflow-y: scroll;
 	}
 	
@@ -6132,12 +6133,10 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	
 	.row-height {
 		height: auto;
-		min-height: ;
 	}
 	
 	.content-left {
 		height: auto;
-		min-height: ;
 		overflow-y: scroll;
 	}
 	

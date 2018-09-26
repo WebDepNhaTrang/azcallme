@@ -2,6 +2,7 @@
 <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 <link href="{{ asset('css/vendors.css') }}" rel="stylesheet">
+<link href="{{ asset('css/alo-coc-coc.css') }}" rel="stylesheet">
 
 <!-- REVOLUTION SLIDER CSS -->
 <link rel="stylesheet" type="text/css" href="{{ asset('rev-slider-files/fonts/font-awesome/css/font-awesome.css') }}">

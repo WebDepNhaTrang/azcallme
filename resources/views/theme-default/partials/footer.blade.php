@@ -57,3 +57,9 @@
         </button>
     </form>
 </div><!-- End Search Menu -->
+
+<!-- Icon Alo Coccoc -->
+<a href="tel://{{ setting('lien-he.phone') }}" class="fancybox">
+<div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" id="coccoc-alo-phoneIcon" style="left:-40px; top: 75%;"><div class="coccoc-alo-ph-circle"></div><div class="coccoc-alo-ph-circle-fill"></div><div class="coccoc-alo-ph-img-circle"></div></div>
+</a>
+<!-- End Icon Alo Coccoc -->

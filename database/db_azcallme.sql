@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th9 26, 2018 lúc 07:24 AM
+-- Thời gian đã tạo: Th9 26, 2018 lúc 08:39 AM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 7.1.20
 
@@ -701,15 +701,15 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (37, 'trang-chu.getstarted_st_link_btn', 'Phần Get Started - Link nút bấm', '#', NULL, 'text', 15, 'Trang Chủ'),
 (38, 'trang-chu.thuexe_st_title', 'Phần Thuê Xe - Tiêu đề', 'Dịch vụ xe đưa đón', NULL, 'text', 1, 'Trang Chủ'),
 (39, 'trang-chu.thuexe_st_subtitle', 'Phần Thuê Xe - Tiêu đề con', 'Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.', NULL, 'text', 2, 'Trang Chủ'),
-(40, 'trang-chu.thuexe_st_icon1', 'Phần Thuê Xe - Icon 1 (Xem thêm css/fontello/demo_icon_set_1.html)', 'icon_set_1_icon-41', NULL, 'text', 3, 'Trang Chủ'),
-(41, 'trang-chu.thuexe_st_title1', 'Phần Thuê Xe - Tiêu đề 1', '+120 Premium tours', NULL, 'text', 4, 'Trang Chủ'),
-(42, 'trang-chu.thuexe_st_des1', 'Phần Thuê Xe - Mô tả 1', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 5, 'Trang Chủ'),
-(43, 'trang-chu.thuexe_st_icon2', 'Phần Thuê Xe - Icon 2', 'icon_set_1_icon-30', NULL, 'text', 6, 'Trang Chủ'),
-(44, 'trang-chu.thuexe_st_title2', 'Phần Thuê Xe - Tiêu đề 2', '+1000 Customers', NULL, 'text', 7, 'Trang Chủ'),
-(45, 'trang-chu.thuexe_st_des2', 'Phần Thuê Xe - Mô tả 2', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 8, 'Trang Chủ'),
-(46, 'trang-chu.thuexe_st_icon3', 'Phần Thuê Xe - Icon 3', 'icon_set_1_icon-57', NULL, 'text', 9, 'Trang Chủ'),
-(47, 'trang-chu.thuexe_st_title3', 'Phần Thuê Xe - Tiêu đề 3', 'H24 Support', NULL, 'text', 10, 'Trang Chủ'),
-(48, 'trang-chu.thuexe_st_des3', 'Phần Thuê Xe - Mô tả 3', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 11, 'Trang Chủ'),
+(40, 'xe-dua-don.icon1', 'Cột 1 - Icon 1 (Xem thêm css/fontello/demo_icon_set_1.html)', 'icon_set_1_icon-41', NULL, 'text', 4, 'Xe Đưa Đón'),
+(41, 'xe-dua-don.title1', 'Cột 1 - Tiêu đề 1', '+120 Premium tours', NULL, 'text', 5, 'Xe Đưa Đón'),
+(42, 'xe-dua-don.des1', 'Cột 1 - Mô tả 1', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 6, 'Xe Đưa Đón'),
+(43, 'xe-dua-don.icon2', 'Cột 2 - Icon 2', 'icon_set_1_icon-30', NULL, 'text', 7, 'Xe Đưa Đón'),
+(44, 'xe-dua-don.title2', 'Cột 2 - Tiêu đề 2', '+1000 Customers', NULL, 'text', 8, 'Xe Đưa Đón'),
+(45, 'xe-dua-don.des2', 'Cột 2 - Mô tả 2', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 9, 'Xe Đưa Đón'),
+(46, 'xe-dua-don.icon3', 'Cột 3 - Icon 3', 'icon_set_1_icon-57', NULL, 'text', 10, 'Xe Đưa Đón'),
+(47, 'xe-dua-don.title3', 'Cột 3 - Tiêu đề 3', 'H24 Support', NULL, 'text', 11, 'Xe Đưa Đón'),
+(48, 'xe-dua-don.des3', 'Cột 3 - Mô tả 3', 'Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.', NULL, 'text_area', 12, 'Xe Đưa Đón'),
 (49, 'lien-he.banner_title', 'Banner - Tiêu đề', 'Liên hệ', NULL, 'text', 6, 'Liên Hệ'),
 (50, 'lien-he.banner_des', 'Banner - Mô tả', 'Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.', NULL, 'text', 7, 'Liên Hệ'),
 (51, 'lien-he.banner_img', 'Banner - Hình ảnh (1400 x 470 px)', 'settings\\September2018\\oBRfbNa2SflWKyW5VSlL.jpg', NULL, 'image', 32, 'Liên Hệ'),
@@ -727,7 +727,11 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (64, 'can-ho.banner_title', 'Banner - Tiêu đề', 'Căn hộ', NULL, 'text', 46, 'Căn Hộ'),
 (65, 'can-ho.banner_des', 'Banner - Mô tả', 'Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.', NULL, 'text', 47, 'Căn Hộ'),
 (66, 'can-ho.banner_img', 'Banner - Hình ảnh (1400 x 470 px)', 'settings\\September2018\\gjr7keKUUastSnSsf77O.jpg', NULL, 'image', 48, 'Căn Hộ'),
-(67, 'can-ho.paginate', 'Phân Trang', '1', NULL, 'text', 49, 'Căn Hộ');
+(67, 'can-ho.paginate', 'Phân Trang', '1', NULL, 'text', 49, 'Căn Hộ'),
+(68, 'xe-dua-don.banner_title', 'Banner - Tiêu đề', 'Dịch vụ xe đưa đón', NULL, 'text', 1, 'Xe Đưa Đón'),
+(69, 'xe-dua-don.banner_des', 'Banner - Mô tả', 'Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.', NULL, 'text', 2, 'Xe Đưa Đón'),
+(70, 'xe-dua-don.banner_img', 'Banner - Hình ảnh (1400 x 470 px)', 'settings\\September2018\\5d23taC6PP6AbK1qBFL7.jpg', NULL, 'image', 3, 'Xe Đưa Đón'),
+(71, 'xe-dua-don.body', 'Nội dung', '<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>\r\n<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>\r\n<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>', NULL, 'rich_text_box', 50, 'Xe Đưa Đón');
 
 -- --------------------------------------------------------
 
@@ -1101,7 +1105,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT cho bảng `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT cho bảng `testimonials`

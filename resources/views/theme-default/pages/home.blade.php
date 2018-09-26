@@ -26,47 +26,36 @@
         <div class="row">
             <div class="col-lg-4 wow zoomIn" data-wow-delay="0.2s">
                 <div class="feature_home">
-                    <i class="{{ setting('trang-chu.thuexe_st_icon1') }}"></i>
-                    <h3>{{ setting('trang-chu.thuexe_st_title1') }}</h3>
+                    <i class="{{ setting('xe-dua-don.icon1') }}"></i>
+                    <h3>{{ setting('xe-dua-don.title1') }}</h3>
                     <p>
-                        {{ setting('trang-chu.thuexe_st_des1') }}
+                        {{ setting('xe-dua-don.des1') }}
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 wow zoomIn" data-wow-delay="0.4s">
                 <div class="feature_home">
-                    <i class="{{ setting('trang-chu.thuexe_st_icon2') }}"></i>
-                    <h3>{{ setting('trang-chu.thuexe_st_title2') }}</h3>
+                    <i class="{{ setting('xe-dua-don.icon2') }}"></i>
+                    <h3>{{ setting('xe-dua-don.title2') }}</h3>
                     <p>
-                        {{ setting('trang-chu.thuexe_st_des2') }}
+                        {{ setting('xe-dua-don.des2') }}
                     </p>
                 </div>
             </div>
             <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
                 <div class="feature_home">
-                    <i class="{{ setting('trang-chu.thuexe_st_icon3') }}"></i>
-                    <h3>{{ setting('trang-chu.thuexe_st_title3') }}</h3>
+                    <i class="{{ setting('xe-dua-don.icon3') }}"></i>
+                    <h3>{{ setting('xe-dua-don.title3') }}</h3>
                     <p>
-                        {{ setting('trang-chu.thuexe_st_des3') }}
+                        {{ setting('xe-dua-don.des3') }}
                     </p>
                 </div>
             </div>
         </div>
         <!--End row -->
-
-        <hr>
-
-        <div class="row">
-            <div class="col-md-6">
-                <img src="{{ Voyager::image(setting('trang-chu.getstarted_st_img')) }}" alt="AZ Callme" class="img-fluid laptop">
-            </div>
-            <div class="col-md-6">
-                <h3><span>{{ setting('trang-chu.getstarted_st_title') }}</span></h3>
-                {!! setting('trang-chu.getstarted_st_content') !!}
-                <a href="{{ setting('trang-chu.getstarted_st_link_btn') }}" class="btn_1">Bắt đầu ngay</a>
-            </div>
-        </div>
-        <!-- End row -->
+        <p class="text-center nopadding">
+            <a href="{{ route('frontend.pages.car') }}" class="btn_1 medium"><i class="icon-eye-7"></i>Tìm hiểu thêm</a>
+        </p>
 
     </div>
     <!-- End container -->
@@ -176,11 +165,25 @@
         <!-- End row -->
         
         <p class="text-center nopadding">
-            <a href="all_hotels_list.html" class="btn_1 medium"><i class="icon-eye-7"></i>Xem tất cả ({{ totalApartments() }} căn hộ)</a>
+            <a href="{{ route('frontend.pages.apartment') }}" class="btn_1 medium"><i class="icon-eye-7"></i>Xem tất cả ({{ totalApartments() }} căn hộ)</a>
         </p>
         
     </div>
     <!-- End container -->
+
+    <div class="container padding_bottom_30">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ Voyager::image(setting('trang-chu.getstarted_st_img')) }}" alt="AZ Callme" class="img-fluid laptop">
+            </div>
+            <div class="col-md-6">
+                <h3><span>{{ setting('trang-chu.getstarted_st_title') }}</span></h3>
+                {!! setting('trang-chu.getstarted_st_content') !!}
+                <a href="{{ setting('trang-chu.getstarted_st_link_btn') }}" class="btn_1">Bắt đầu ngay</a>
+            </div>
+        </div>
+        <!-- End row -->
+    </div>
 </main>
 <!-- End main -->
 @endsection
