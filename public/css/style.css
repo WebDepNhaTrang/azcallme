@@ -1727,7 +1727,7 @@ a#filters_col_bt .icon_set_1_icon-65 {
 }
 
 #price_single_main span {
-	font-size: 60px;
+	font-size: 40px;
 	color: #3CF;
 }
 
@@ -4457,7 +4457,7 @@ ul.plan-features {
 	background: url(../img/badge_save.png);
 	font-size: 11px;
 	line-height: 12px;
-	padding-top: 32px;
+	padding-top: 38px;
 }
 
 .badge_save strong {

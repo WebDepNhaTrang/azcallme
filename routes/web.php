@@ -33,6 +33,10 @@ Route::get('/tours.html', function (){
     return view('theme-default.pages.tour');
 })->name('frontend.pages.tour');
 
+// Chi Tiết Tour
+Route::get('/tour/{slug}_{id}.html', 'FrontendController@tourDetail')
+    ->name('frontend.pages.tour-detail');
+
 // Căn hộ
 Route::get('/can-ho.html', function (){
     return view('theme-default.pages.apartment');

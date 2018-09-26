@@ -31,7 +31,7 @@
         <div class="row">
             <div class="col-3">
                 <div id="logo_home">
-                    <h1><a href="index.html" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 34px;">AZ Callme</a></h1>
+                    <h1><a href="{{ route('frontend.pages.home') }}" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 34px;">AZ Callme</a></h1>
                 </div>
             </div>
             <nav class="col-9">

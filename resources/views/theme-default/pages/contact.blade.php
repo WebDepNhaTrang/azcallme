@@ -115,7 +115,7 @@
 					</div>
 					<div class="box_style_4">
 						<i class="icon_set_1_icon-57"></i>
-						<h4>Bạn cần<span>tư vấn?</span></h4>
+						<h4>Bạn cần<span> tư vấn?</span></h4>
 						<a href="{{ setting('lien-he.phone') }}" class="phone">{{ setting('lien-he.phone') }}</a>
 						<!-- <small>Monday to Friday 9.00am - 7.30pm</small> -->
 					</div>
