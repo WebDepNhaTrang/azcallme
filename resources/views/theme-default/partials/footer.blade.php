@@ -1,4 +1,4 @@
-<footer class="revealed" style="background: {{ setting('trang-chu.footer-bg-color') }} url(../img/pattern.png) repeat 0 0;">
+<footer class="revealed" style="background: {{ setting('site.footer-bg-color') }} url(../img/pattern.png) repeat 0 0;">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -7,7 +7,7 @@
                         <img src="{{ Voyager::image(setting('site.logo')) }}" alt="AZ Callme">
                     </a>
                 </h3>
-                <p>{{ setting('trang-chu.footer-des') }}</p>
+                <p>{{ setting('site.footer-des') }}</p>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-3">
@@ -28,13 +28,21 @@
             <div class="col-md-12">
                 <div id="social_footer">
                     <ul>
-                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        @if(setting('site.link_facebook'))
+                        <li><a href="{{ setting('site.link_facebook') }}"><i class="icon-facebook"></i></a></li>
+                        @endif
                         <!-- <li><a href="#"><i class="icon-twitter"></i></a></li> -->
-                        <li><a href="#"><i class="icon-google"></i></a></li>
-                        <li><a href="#"><i class="icon-instagram"></i></a></li>
+                        @if(setting('site.link_google'))
+                        <li><a href="{{ setting('site.link_google') }}"><i class="icon-google"></i></a></li>
+                        @endif
+                        @if(setting('site.link_instagram'))
+                        <li><a href="{{ setting('site.link_instagram') }}"><i class="icon-instagram"></i></a></li>
+                        @endif
                         <!-- <li><a href="#"><i class="icon-pinterest"></i></a></li> -->
                         <!-- <li><a href="#"><i class="icon-vimeo"></i></a></li> -->
-                        <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                        @if(setting('site.link_youtube'))
+                        <li><a href="{{ setting('site.link_youtube') }}"><i class="icon-youtube-play"></i></a></li>
+                        @endif
                     </ul>
                     <div class="copywrite-text d-flex align-items-center justify-content-center">
                         <p>©<script>document.write(new Date().getFullYear());</script> Thiết kế và Phát triển <i class="fa fa-heart-o" aria-hidden="true"></i> bởi <a href="http://webdepnhatrang.com" target="_blank" class="designBy" title="thiết kế web tại Nha Trang, thiết kế web Khánh Hòa, web đẹp nha trang">KaTiSoft - Web Đẹp Nha Trang</a>

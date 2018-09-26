@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th9 26, 2018 lúc 08:39 AM
+-- Thời gian đã tạo: Th9 26, 2018 lúc 08:47 AM
 -- Phiên bản máy phục vụ: 5.7.19
 -- Phiên bản PHP: 7.1.20
 
@@ -666,7 +666,7 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (1, 'site.title', 'Site Title', 'azcallme', '', 'text', 1, 'Site'),
 (2, 'site.description', 'Site Description', 'azcallme', '', 'text', 2, 'Site'),
 (3, 'site.logo', 'Site Logo', 'settings\\September2018\\YtxnAddTKCPYlx9DwNuM.png', '', 'image', 3, 'Site'),
-(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
+(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 54, 'Site'),
 (5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
 (6, 'admin.title', 'Admin Title', 'azcallme', '', 'text', 1, 'Admin'),
 (7, 'admin.description', 'Admin Description', 'Welcome to azcallme', '', 'text', 2, 'Admin'),
@@ -675,8 +675,8 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
 (11, 'lien-he.phone', 'Điện thoại', '0909 999 999', NULL, 'text', 35, 'Liên Hệ'),
 (12, 'lien-he.email', 'Email', 'azcallme@gmail.com', NULL, 'text', 36, 'Liên Hệ'),
-(13, 'trang-chu.footer-bg-color', 'Phần Footer - Màu nền', '#101135', NULL, 'text', 44, 'Trang Chủ'),
-(15, 'trang-chu.footer-des', 'Phần Footer - Mô tả', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe harum quaerat doloribus dolor sunt molestiae error ipsa quos accusamus velit consectetur atque, voluptatem veniam quia officia placeat minima molestias quisquam.', NULL, 'text_area', 45, 'Trang Chủ'),
+(13, 'site.footer-bg-color', 'Phần Footer - Màu nền', '#101135', NULL, 'text', 4, 'Site'),
+(15, 'site.footer-des', 'Phần Footer - Mô tả', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe harum quaerat doloribus dolor sunt molestiae error ipsa quos accusamus velit consectetur atque, voluptatem veniam quia officia placeat minima molestias quisquam.', NULL, 'text_area', 44, 'Site'),
 (16, 'gioi-thieu.banner_title', 'Banner - Tiêu đề', 'Giới Thiệu', NULL, 'text', 10, 'Giới Thiệu'),
 (17, 'gioi-thieu.banner_des', 'Banner - Mô tả', 'Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.', NULL, 'text', 11, 'Giới Thiệu'),
 (18, 'gioi-thieu.banner-img', 'Banner - Hình ảnh (1400 x 470 px)', 'settings\\September2018\\PfSePtulUKfU597FUhUj.jpg', NULL, 'image', 12, 'Giới Thiệu'),
@@ -731,7 +731,11 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (68, 'xe-dua-don.banner_title', 'Banner - Tiêu đề', 'Dịch vụ xe đưa đón', NULL, 'text', 1, 'Xe Đưa Đón'),
 (69, 'xe-dua-don.banner_des', 'Banner - Mô tả', 'Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.', NULL, 'text', 2, 'Xe Đưa Đón'),
 (70, 'xe-dua-don.banner_img', 'Banner - Hình ảnh (1400 x 470 px)', 'settings\\September2018\\5d23taC6PP6AbK1qBFL7.jpg', NULL, 'image', 3, 'Xe Đưa Đón'),
-(71, 'xe-dua-don.body', 'Nội dung', '<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>\r\n<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>\r\n<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>', NULL, 'rich_text_box', 50, 'Xe Đưa Đón');
+(71, 'xe-dua-don.body', 'Nội dung', '<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>\r\n<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>\r\n<p>Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật. Dữ liệu đang được cập nhật.&nbsp;</p>', NULL, 'rich_text_box', 50, 'Xe Đưa Đón'),
+(72, 'site.link_facebook', 'Phần Footer - Link Facebook', '#', NULL, 'text', 45, 'Site'),
+(73, 'site.link_google', 'Phần Footer - Link Google', '#', NULL, 'text', 51, 'Site'),
+(74, 'site.link_instagram', 'Phần Footer - Link Instagram', '#', NULL, 'text', 52, 'Site'),
+(75, 'site.link_youtube', 'Phần Footer - Link Youtube', '#', NULL, 'text', 53, 'Site');
 
 -- --------------------------------------------------------
 
@@ -1105,7 +1109,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT cho bảng `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT cho bảng `testimonials`
