@@ -385,19 +385,19 @@ header.sticky #logo .logo_sticky{ display:block; }
 	width:160px;
 	height:34px;
 	display:block;
-	background-image:url(../img/logo.png);
+	/* background-image:url(../img/logo.png);
 	background-repeat:no-repeat;
 	background-position:left top;
-	background-size: 160px 34px;
+	background-size: 160px 34px; */
 	text-indent:-9999px;
 }
 header.sticky #logo_home h1{
 	margin:0 0 10px 0;
 	padding:0;
 }
-header.sticky #logo_home h1 a{
+/* header.sticky #logo_home h1 a{
 	background-image:url(../img/logo_sticky.png);
-}
+} */
 header#plain #logo_home h1 a{
 	background-image:url(../img/logo_sticky.png);
 }
@@ -679,7 +679,6 @@ ul#cart_items li:last-child span{
 
 /* Footer */
 footer {
-	background: #222 url(../img/pattern.png) repeat 0 0;
 	color: #fff;
 	padding: 30px 0 10px 0;
 }
@@ -1728,7 +1727,7 @@ a#filters_col_bt .icon_set_1_icon-65 {
 }
 
 #price_single_main span {
-	font-size: 60px;
+	font-size: 40px;
 	color: #3CF;
 }
 
@@ -2279,8 +2278,6 @@ input.qty2 {
 .features-bg {
 	position: relative;
 	min-height: 400px;
-	background: url(../img/features-intro-01.jpg) no-repeat center center;
-	background-size: cover;
 }
 
 .features-img {
@@ -3147,6 +3144,12 @@ ul.list_order li span {
 }
 
 /* Margin tools */
+.padding_bottom_30{
+	padding-bottom: 30px;
+}
+.margin_bottom_30{
+	margin-bottom: 30px;
+}
 .margin_60 {
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -4460,7 +4463,7 @@ ul.plan-features {
 	background: url(../img/badge_save.png);
 	font-size: 11px;
 	line-height: 12px;
-	padding-top: 32px;
+	padding-top: 38px;
 }
 
 .badge_save strong {
@@ -4481,12 +4484,12 @@ ul.plan-features {
 /* Promo_full */
 .promo_full {
 	height: auto;
-	background: url(../img/home_bg_2.jpg) no-repeat center center;
+	/* background: url(../img/home_bg_2.jpg) no-repeat center center;
 	background-attachment: fixed;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	-o-background-size: cover;
+	-o-background-size: cover; */
 	position: relative;
 }
 
@@ -6071,12 +6074,10 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	
 	.row-height {
 		height: auto;
-		min-height: ;
 	}
 	
 	.content-left {
 		height: auto;
-		min-height: ;
 		overflow-y: scroll;
 	}
 	
@@ -6132,12 +6133,10 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	
 	.row-height {
 		height: auto;
-		min-height: ;
 	}
 	
 	.content-left {
 		height: auto;
-		min-height: ;
 		overflow-y: scroll;
 	}
 	
@@ -6626,7 +6625,7 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	}
 	
 	.sticky ul#top_tools, ul#top_tools  {
-		margin: 3px 25px 0 0;
+		margin: 3px 45px 0 0;
 	}
 	
 	.dropdown.dropdown-cart {

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>@yield('title')</title>
+        <title>@yield('title') | {{ setting('site.title') }}</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
         <meta name="author" content="webdepnhatrang" />
@@ -34,8 +34,15 @@
         @include('theme-default.google.analytics')
     </head>
     <body>
+        <!-- Facebook Customer Chat -->
+        @if(setting('site.facebook_custom_chat'))
+            {!! setting('site.facebook_custom_chat') !!}
+        @endif
+
         <!-- Facebook SDK js -->
-        @include('theme-default.facebook.facebook-sdk')
+        @if(setting('site.facebook_sdk'))
+            {!! setting('site.facebook_sdk') !!}
+        @endif
 
         @include('theme-default.partials.header')
 
