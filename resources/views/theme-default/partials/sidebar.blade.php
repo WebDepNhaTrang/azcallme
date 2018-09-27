@@ -13,7 +13,7 @@
     <i class="icon_set_1_icon-57"></i>
     <h4>Hỗ trợ<span> tư vấn?</span></h4>
     <h4>
-        <a href="{{ setting('lien-he.phone') }}" class="phone">{{ setting('lien-he.phone') }}</a>
+        <a href="{{ setting('lien-he.phone2') }}" class="phone">{{ setting('lien-he.phone2') }}</a>
     </h4>
 </div>
 <div class="box_style_4">
