@@ -15,7 +15,6 @@
     @include('theme-default.partials.home-slider')
 
     <div class="container margin_60">
-
         <div class="main_title">
             <h2><span>{{ setting('trang-chu.thuexe_st_title') }}</span></h2>
             <p>
@@ -56,9 +55,22 @@
         <p class="text-center nopadding">
             <a href="{{ route('frontend.pages.car') }}" class="btn_1 medium"><i class="icon-eye-7"></i>Tìm hiểu thêm</a>
         </p>
-
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ Voyager::image(setting('trang-chu.getstarted_st_img')) }}" alt="AZ Callme" class="img-fluid laptop">
+            </div>
+            <div class="col-md-6">
+                <h3><span>{{ setting('trang-chu.getstarted_st_title') }}</span></h3>
+                {!! setting('trang-chu.getstarted_st_content') !!}
+                <a href="{{ setting('trang-chu.getstarted_st_link_btn') }}" class="btn_1">Bắt đầu ngay</a>
+            </div>
+        </div>
+        <!-- End row -->
     </div>
     <!-- End container -->
+
 
     <section class="promo_full" style="background: url({{ Voyager::image(setting('trang-chu.quangcao_st_img')) }}) no-repeat center center;background-attachment: fixed;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;">
         <div class="promo_full_wp magnific">
@@ -170,20 +182,6 @@
         
     </div>
     <!-- End container -->
-
-    <div class="container padding_bottom_30">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="{{ Voyager::image(setting('trang-chu.getstarted_st_img')) }}" alt="AZ Callme" class="img-fluid laptop">
-            </div>
-            <div class="col-md-6">
-                <h3><span>{{ setting('trang-chu.getstarted_st_title') }}</span></h3>
-                {!! setting('trang-chu.getstarted_st_content') !!}
-                <a href="{{ setting('trang-chu.getstarted_st_link_btn') }}" class="btn_1">Bắt đầu ngay</a>
-            </div>
-        </div>
-        <!-- End row -->
-    </div>
 </main>
 <!-- End main -->
 @endsection

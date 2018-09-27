@@ -34,8 +34,15 @@
         @include('theme-default.google.analytics')
     </head>
     <body>
+        <!-- Facebook Customer Chat -->
+        @if(setting('site.facebook_custom_chat'))
+            {!! setting('site.facebook_custom_chat') !!}
+        @endif
+
         <!-- Facebook SDK js -->
-        @include('theme-default.facebook.facebook-sdk')
+        @if(setting('site.facebook_sdk'))
+            {!! setting('site.facebook_sdk') !!}
+        @endif
 
         @include('theme-default.partials.header')
 
