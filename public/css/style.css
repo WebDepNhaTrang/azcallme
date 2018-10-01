@@ -79,7 +79,9 @@ h1, h2, h3 {margin-top: 20px;margin-bottom: 10px;}
 
 .main_title {text-align:center; font-size:16px; margin-bottom:30px;}
 .main_title h2 {text-transform: uppercase; font-weight:700; letter-spacing:-1px; font-size:30px; margin-bottom:0;margin-top:0; }
-.main_title p {font-weight:300; font-size:18px}
+.main_title p {
+    /*font-family:"Lato",Arial, sans-serif;*/
+    font-weight:300; font-size:18px}
 
 h2 span, h3 span, h4 span, h5 span, h6 span{color:#e04f67;}
 
@@ -363,6 +365,7 @@ a.btn_login:hover, .btn_login:hover{
 #logo {margin-top:10px;}
 
 header{
+    background-color: #33333347;
 	width:100%;
 	position:fixed;
 	left:0;
@@ -383,7 +386,7 @@ header.sticky #logo .logo_sticky{ display:block; }
 }
 #logo_home h1 a, header.sticky #logo_home h1 a, header#plain #logo_home h1 a, header#colored #logo_home h1 a{
 	width:160px;
-	height:34px;
+	height:60px;
 	display:block;
 	/* background-image:url(../img/logo.png);
 	background-repeat:no-repeat;
@@ -445,7 +448,7 @@ nav{ margin-top:20px; position:relative;}
 .sticky nav{ margin-top:10px}
 .sticky #logo{ margin-top:0; margin-bottom:10px;}
 
-ul#top_tools{list-style:none; padding:0; position:absolute; right:15px; top:0; z-index:999;}
+ul#top_tools{list-style:none; padding:0; position:absolute; right:15px; top:10px; z-index:999;}
 ul#top_tools a{ color:#fff;}
 ul#top_tools a:hover {color:#e04f67;}
 .sticky ul#top_tools a{ color:#333; }
@@ -787,13 +790,13 @@ a#email_footer:before {
 .main-menu a {-webkit-transition:all 0.3s;-moz-transition:all 0.3s;transition:all 0.3s;}
 .main-menu ul,
 .main-menu ul li,
-.main-menu ul li a {position: relative; margin-bottom:0; margin: 0;padding: 0;}
+.main-menu ul li a {position: relative; margin-bottom:0; margin: 0;padding: 0px 0px 0px 15px;}
 
 /* Submenu styles */
 .main-menu ul li a {display: block; line-height: 20px;padding:10px;}
 			
 /*First level styles */			
-.main-menu > ul > li > a {color: #fff; padding: 0 8px 15px  8px; font-size:13px;}
+.main-menu > ul > li > a {color: #fff; padding: 10px 8px 15px  8px; font-size:16px;}
 .sticky .main-menu > ul > li > a {color: #333;}
 .main-menu > ul > li:hover > a {color: #e04f67;}
 
@@ -1001,7 +1004,7 @@ a.show-submenu-mega + .menu-wrapper.show_mega,
   display:block;
   overflow: visible;
   position:absolute; 
-  top:0;
+  top:10px;
   right:20px;
   margin: 0;
   padding: 0;
@@ -5959,7 +5962,7 @@ only screen and (min-device-pixel-ratio: 2) and (max-width: 991px) {
 	header#plain #logo_home h1 a,
 	header#colored #logo_home h1 a {
 		width: 180px;
-		height: 30px;
+		height: 60px;
 		background-size: auto 30px;
 	}
 	

@@ -31,14 +31,14 @@
         <div class="row">
             <div class="col-3">
                 <div id="logo_home">
-                    <h1><a href="{{ route('frontend.pages.home') }}" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 34px;">AZ Callme</a></h1>
+                    <h1><a href="{{ route('frontend.pages.home') }}" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 60px;">AZ Callme</a></h1>
                 </div>
             </div>
             <nav class="col-9">
                 <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
                 <div class="main-menu">
                     <div id="header_menu">
-                        <img src="{{ Voyager::image(setting('site.logo')) }}" width="160" height="34" alt="AZ Callme" data-retina="true">
+                        <img src="{{ Voyager::image(setting('site.logo')) }}" width="160" height="60" alt="AZ Callme" data-retina="true">
                     </div>
                     <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                     {{ menu('frontend', 'theme-default.partials.main-menu') }}
