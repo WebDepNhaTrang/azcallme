@@ -52,9 +52,6 @@
             </div>
         </div>
         <!--End row -->
-        <p class="text-center nopadding">
-            <a href="{{ route('frontend.pages.car') }}" class="btn_1 medium"><i class="icon-eye-7"></i>Tìm hiểu thêm</a>
-        </p>
         <br>
         <hr>
         <div class="row">
