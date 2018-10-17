@@ -99,6 +99,13 @@
             });
         }
     }); /*ready*/
+
+    $( document ).ready(function() {
+        var currentUrl = '{{ \Request::url() }}';
+        var domain = '{{ url('/') }}';
+        console.log(currentUrl);
+        console.log(domain);
+    });
 </script>
 
 <!-- NOTIFY BUBBLES  -->

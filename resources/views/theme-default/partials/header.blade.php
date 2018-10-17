@@ -1,3 +1,12 @@
+@php
+    if(app()->getLocale() != 'vi'){
+        $chuoi_tim = url('/').'/'.app()->getLocale();
+        $locale = app()->getLocale();
+    }else{
+        $chuoi_tim = url('/');
+        $locale = null;
+    }
+@endphp
 <div id="preloader">
     <div class="sk-spinner sk-spinner-wave">
         <div class="sk-rect1"></div>
@@ -17,11 +26,48 @@
     <div id="top_line">
         <div class="container">
             <div class="row">
-                <div class="col-6"><i class="icon-phone"></i><strong>{{ setting('lien-he.phone') }}</strong></div>
                 <div class="col-6">
-                    <ul id="top_links">
-                        <li><a href="mailto:{{ setting('lien-he.email') }}"><i class="icon-mail"></i>{{ setting('lien-he.email') }}</a></li>
-                    </ul>
+                    <i class="icon-phone"></i>{{ setting('lien-he.phone') }}
+                    <i class="icon-mail" style="margin-left: 10px;"></i>{{ setting('lien-he.email') }}
+                </div>
+                <div class="col-6">
+                <div class="dropdown multilang">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @if(app()->getLocale() == 'vi')
+                            <img src="{{ asset('/img/vn.png') }}" title="Tiếng Việt" alt="Tiếng Việt"> Tiếng Việt
+                            <span class="caret"></span>
+                        @elseif(app()->getLocale() == 'en')
+                            <img src="{{ asset('/img/us.png') }}" title="English" alt="English"> English
+                            <span class="caret"></span>
+                        @elseif(app()->getLocale() == 'cn')
+                            <img src="{{ asset('/img/cn.png') }}" title="China" alt="China"> 简体中文
+                            <span class="caret"></span>
+                        @endif
+                        
+                    </button>
+                    
+                    <ul class="dropdown-menu language_bar_chooser ">
+                        
+                        <li class="{{ (app()->getLocale() == 'vi')?'active':'' }}">
+                            <a rel="alternate" href="{{ str_replace($chuoi_tim,'',URL::current()) }}">
+                                <img src="{{ asset('/img/vn.png') }}" title="Tiếng Việt" alt="Tiếng Việt"><span> Tiếng Việt</span>
+                            </a> 
+                        </li>
+                        <li class="{{ (app()->getLocale() == 'en')?'active':'' }}">
+                            <a rel="alternate" href="{{ str_replace($chuoi_tim, url('/en'), URL::current()) }}">
+                                <img src="{{ asset('/img/us.png') }}" title="English" alt="English"><span> English</span>
+                            </a>
+                        </li>
+                        <li class="{{ (app()->getLocale() == 'cn')?'active':'' }}">
+                            <a rel="alternate" href="{{ str_replace($chuoi_tim, url('/cn'), URL::current()) }}">
+                                <img src="{{ asset('/img/cn.png') }}" title="China" alt="China"><span> 简体中文</span>
+                            </a>
+                        </li>
+                    </ul>   
+                </div>
+                    <!-- <ul id="top_links">
+                        
+                    </ul> -->
                 </div>
             </div><!-- End row -->
         </div><!-- End container-->
@@ -31,7 +77,7 @@
         <div class="row">
             <div class="col-3">
                 <div id="logo_home">
-                    <h1><a href="{{ route('frontend.pages.home') }}" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 60px;">AZ Callme</a></h1>
+                    <h1><a href="{{ route('frontend.pages.home', $locale) }}" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 60px;">AZ Callme</a></h1>
                 </div>
             </div>
             <nav class="col-9">
