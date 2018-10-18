@@ -1,10 +1,9 @@
 @php
     if(app()->getLocale() != 'vi'){
-        $chuoi_tim = url('/').'/'.app()->getLocale();
-        $locale = app()->getLocale();
+        
     }else{
-        $chuoi_tim = url('/');
-        $locale = null;
+        
+        
     }
 @endphp
 <div id="preloader">
@@ -49,17 +48,17 @@
                     <ul class="dropdown-menu language_bar_chooser ">
                         
                         <li class="{{ (app()->getLocale() == 'vi')?'active':'' }}">
-                            <a rel="alternate" href="{{ str_replace($chuoi_tim,'',URL::current()) }}">
+                            <a rel="alternate" href="{{ URL::current() }}">
                                 <img src="{{ asset('/img/vn.png') }}" title="Tiếng Việt" alt="Tiếng Việt"><span> Tiếng Việt</span>
                             </a> 
                         </li>
                         <li class="{{ (app()->getLocale() == 'en')?'active':'' }}">
-                            <a rel="alternate" href="{{ str_replace($chuoi_tim, url('/en'), URL::current()) }}">
+                            <a rel="alternate" href="{{ URL::current() }}?lang=en">
                                 <img src="{{ asset('/img/us.png') }}" title="English" alt="English"><span> English</span>
                             </a>
                         </li>
                         <li class="{{ (app()->getLocale() == 'cn')?'active':'' }}">
-                            <a rel="alternate" href="{{ str_replace($chuoi_tim, url('/cn'), URL::current()) }}">
+                            <a rel="alternate" href="{{ URL::current() }}?lang=cn">
                                 <img src="{{ asset('/img/cn.png') }}" title="China" alt="China"><span> 简体中文</span>
                             </a>
                         </li>
@@ -77,7 +76,7 @@
         <div class="row">
             <div class="col-3">
                 <div id="logo_home">
-                    <h1><a href="{{ route('frontend.pages.home', $locale) }}" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 60px;">AZ Callme</a></h1>
+                    <h1><a href="{{ route('frontend.pages.home') }}?lang={{ app()->getLocale() }}" title="AZ Callme" style="background-image: url({{ Voyager::image(setting('site.logo')) }});background-repeat: no-repeat;background-position: left top;background-size: 160px 60px;">AZ Callme</a></h1>
                 </div>
             </div>
             <nav class="col-9">

@@ -16,9 +16,9 @@
 
     <div class="container margin_60">
         <div class="main_title">
-            <h2><span>{{ setting('trang-chu.thuexe_st_title') }}</span></h2>
+            <h2><span>{{ __('settings.trang-chu.thuexe_st_title') }}</span></h2>
             <p>
-                {{ setting('trang-chu.thuexe_st_subtitle') }}
+                {{ __('settings.trang-chu.thuexe_st_subtitle') }}
             </p>
         </div>
 
@@ -59,8 +59,8 @@
                 <img src="{{ Voyager::image(setting('trang-chu.getstarted_st_img')) }}" alt="AZ Callme" class="img-fluid laptop">
             </div>
             <div class="col-md-6">
-                <h3><span>{{ setting('trang-chu.getstarted_st_title') }}</span></h3>
-                {!! setting('trang-chu.getstarted_st_content') !!}
+                <h3><span>{{ __('settings.trang-chu.getstarted_st_title') }}</span></h3>
+                {!! __('settings.trang-chu.getstarted_st_content') !!}
                 <a href="{{ setting('trang-chu.getstarted_st_link_btn') }}" class="btn_1">Bắt đầu ngay</a>
             </div>
         </div>
@@ -72,9 +72,9 @@
     <section class="promo_full" style="background: url({{ Voyager::image(setting('trang-chu.quangcao_st_img')) }}) no-repeat center center;background-attachment: fixed;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;">
         <div class="promo_full_wp magnific">
             <div>
-                <h3>{{ setting('trang-chu.quangcao_st_title') }}</h3>
+                <h3>{{ __('settings.trang-chu.quangcao_st_title') }}</h3>
                 <p>
-                    {{ setting('trang-chu.quangcao_st_subtitle') }}
+                    {{ __('settings.trang-chu.quangcao_st_subtitle') }}
                 </p>
                 <a href="{{ setting('trang-chu.quangcao_st_link_youtube') }}" class="video"><i class="icon-play-circled2-1"></i></a>
             </div>
@@ -85,8 +85,8 @@
     <div class="container margin_60">
 
         <div class="main_title">
-            <h2><span>{{ setting('trang-chu.tour_st_title') }}</span></h2>
-            <p>{{ setting('trang-chu.tour_st_subtitle') }}</p>
+            <h2><span>{{ __('settings.trang-chu.tour_st_title') }}</span></h2>
+            <p>{{ __('settings.trang-chu.tour_st_subtitle') }}</p>
         </div>
 
         @php
@@ -126,14 +126,14 @@
         @endif
         
         <p class="text-center add_bottom_30">
-            <a href="{{ route('frontend.pages.tour') }}" class="btn_1 medium"><i class="icon-eye-7"></i>Xem tất cả ({{ totalTours() }} tours)</a>
+            <a href="{{ route('frontend.pages.tour') }}" class="btn_1 medium"><i class="icon-eye-7"></i> {{__('settings.trang-chu.view_all')}} ({{ totalTours() }} {{__('settings.trang-chu.tours')}})</a>
         </p>
 
         <hr>
 
         <div class="main_title">
-            <h2><span>{{ setting('trang-chu.canho_st_title') }}</span></h2>
-            <p>{{ setting('trang-chu.canho_st_subtitle') }}</p>
+            <h2><span>{{ __('settings.trang-chu.canho_st_title') }}</span></h2>
+            <p>{{ __('settings.trang-chu.canho_st_subtitle') }}</p>
         </div>
 
         @php
@@ -174,7 +174,7 @@
         <!-- End row -->
         
         <p class="text-center nopadding">
-            <a href="{{ route('frontend.pages.apartment') }}" class="btn_1 medium"><i class="icon-eye-7"></i>Xem tất cả ({{ totalApartments() }} căn hộ)</a>
+            <a href="{{ route('frontend.pages.apartment') }}" class="btn_1 medium"><i class="icon-eye-7"></i> {{__('settings.trang-chu.view_all')}} ({{ totalApartments() }} {{__('settings.trang-chu.apartments')}})</a>
         </p>
         
     </div>
