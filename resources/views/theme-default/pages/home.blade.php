@@ -69,7 +69,7 @@
     <!-- End container -->
 
 
-    <section class="promo_full" style="background: url({{ Voyager::image(setting('trang-chu.quangcao_st_img')) }}) no-repeat center center;background-attachment: fixed;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;">
+    <section id="video-section" class="promo_full" style="background: url({{ Voyager::image(setting('trang-chu.quangcao_st_img')) }}) no-repeat center center;background-attachment: fixed;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;">
         <div class="promo_full_wp magnific">
             <div>
                 <h3>{{ __('settings.trang-chu.quangcao_st_title') }}</h3>
@@ -185,5 +185,18 @@
 
 @section('script')
     <!-- Insert script here -->
+    <script>
+        var flag = false;
+        $(window).scroll(function(){
+            if($(this).scrollTop() >= $('#video-section').offset().top) {
+                if(flag == false){
+                    // alert("abc");
+                    $('#video-section .video').trigger('click');
+                    flag = true;
+                }
+            }
+        });
+    </script>
+    
 @endsection
     
